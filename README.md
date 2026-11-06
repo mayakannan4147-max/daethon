@@ -1,63 +1,112 @@
-# Hangman Console Game
+# Python Practice Project Collection
 
-A simple terminal-based Hangman game built in Python 3 using the standard library.
+This repository contains multiple beginner-friendly Python console applications built with the standard library. Each script focuses on a different practical programming concept such as string logic, file handling, CSV export, directory automation, and rule-based conversation logic.
 
-## Overview
+## Included Programs
 
-The player tries to guess a hidden word one letter at a time before making 6 incorrect guesses. The game displays a masked word, tracks previously guessed letters, prevents duplicate guesses without a penalty, and shows a visual ASCII hangman that updates as mistakes accumulate.
+### 1. Hangman Game
+File: `hangman.py`
 
-## Features
+A terminal-based Hangman game where the player guesses letters to reveal a hidden word before making 6 incorrect guesses.
 
-- Random word selection from a built-in word list
-- 6-mistake limit
-- Masked word display using underscores and revealed letters
-- Duplicate-guess prevention with no penalty
-- ASCII gallows art for each incorrect attempt
-- Win and defeat screens
-- Replay option after each round
+Features:
+- random word selection
+- masked word display
+- duplicate-letter prevention without penalty
+- ASCII gallows updates after each wrong guess
+- win/lose screens
+- replay option
 
-## Requirements
-
-- Python 3
-- Standard library only (`random`)
-
-## How to Run
-
-From the project folder, run:
-
+Run:
 ```bash
 py hangman.py
 ```
 
-Or on some systems:
+### 2. Portfolio Tracker
+File: `portfolio.py`
 
+A simple portfolio tracking utility that stores holdings and calculates current value and gain/loss.
+
+Features:
+- stock ticker dictionary
+- buy price and share quantity tracking
+- market value and percentage gain/loss calculations
+- CSV export to `portfolio_summary.csv`
+- formatted console summary
+
+Run:
 ```bash
-python hangman.py
+py portfolio.py
 ```
 
-## Gameplay
+### 3. File Organizer
+File: `organizer.py`
 
-1. A random word is chosen.
-2. The game shows the word as masked letters (for example: `_ A _ L E`).
-3. Enter one letter at a time.
-4. Correct guesses reveal matching letters.
-5. Incorrect guesses increase the hangman drawing and reduce available mistakes.
-6. The game ends when the word is fully guessed or 6 mistakes are reached.
+An automation utility that organizes files in a selected folder by extension into category folders like Documents, Images, Videos, Archives, and Code.
 
-## File Structure
+Features:
+- extension-to-folder mapping
+- automatic folder creation
+- safe file moving with collision handling
+- permission and OS error handling
+- execution summary output
 
-- `hangman.py` — main game logic and console interface
-- `README.md` — project overview and usage instructions
+Run:
+```bash
+py organizer.py
+```
 
-## Example
+You can also pass a target folder as an argument:
+```bash
+py organizer.py "C:\path\to\folder"
+```
+
+### 4. Customer Support Chatbot
+File: `chatbot.py`
+
+A rule-based chatbot that responds to user queries about business hours, support, shipping, returns, and pricing.
+
+Features:
+- normalized user input
+- keyword and regex-based intent matching
+- fallback responses for unknown questions
+- exit commands: `bye`, `exit`, `quit`
+- interactive console chat loop
+
+Run:
+```bash
+py chatbot.py
+```
+
+## Project Structure
 
 ```text
-=== HANGMAN ===
-Guess the hidden word before the hangman is complete.
+daethon/
+├── README.md
+├── hangman.py
+├── portfolio.py
+├── portfolio_summary.csv
+├── organizer.py
+├── chatbot.py
+└── .gitignore
+```
 
-Word: _ _ _ _ _
-Guessed letters: None
-Mistakes left: 6
-Enter a letter: a
-Correct! 'A' is in the word.
+## Requirements
+
+- Python 3
+- Standard library only (`random`, `csv`, `os`, `shutil`, `pathlib`, `re`, `json`)
+
+## Notes
+
+These programs are designed for learning and practice, with simple logic and console-based interfaces. They can be extended with real APIs, external datasets, or GUI improvements.
+
+## How to Use
+
+Open a terminal in the project folder and run any script individually:
+
+```bash
+py hangman.py
+py portfolio.py
+py organizer.py
+py chatbot.py
 ```
