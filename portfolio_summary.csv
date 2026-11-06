@@ -1,0 +1,10 @@
+symbol,shares,buy_price,current_price,invested,market_value,percent_change,gain_loss
+AAPL,25.00,178.40,214.63,4460.00,5365.75,20.31,905.75
+MSFT,12.00,395.10,428.72,4741.20,5144.64,8.51,403.44
+NVDA,18.00,98.25,116.30,1768.50,2093.40,18.37,324.90
+V,30.00,245.80,274.22,7374.00,8226.60,11.56,852.60
+
+total_invested,18343.70
+total_market_value,20830.39
+total_change,2486.69
+total_percent_change,13.56
